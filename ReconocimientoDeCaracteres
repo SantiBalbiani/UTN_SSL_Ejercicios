@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#define VERDADERO 1
+#define FALSO 0
+
+/* -------------FALTA TERMINAR--------------
+Leer una cadena de consola, recorrerla caracter a caracter e imprimir en pantalla una línea por cada caracter leido. Cada línea dirá:
+“[A-Z]” si es una letra en mayúsculas.
+“[a-z]” si es una letra en minúsculas.
+“[0-9]” si es un número.
+“OTRO” por cualquier otro caracter.
+*/
+int main()
+{
+        size_t tam = 0;
+        int offset = 0;
+        char* unaCadena = malloc(255);
+        char unaLetra = '-';
+        
+    
+        printf("Ingrese una cadena\n");
+        scanf("%s",unaCadena);
+        
+        tam = strlen(unaCadena);
+        
+        while(unaLetra != '\0'){
+            unaLetra = *(unaCadena + offset);
+            
+            if(isdigit(unaLetra)){
+                printf("%c", unaLetra);
+                printf(" ");
+                printf("[0-9]\n");
+            }else{
+            
+            if(isupper(unaLetra)){
+                printf("%c", unaLetra);
+                printf(" ");
+                printf("[A-Z]\n");
+            }
+            
+            
+        offset++;
+        }
+        return 0;
+}
