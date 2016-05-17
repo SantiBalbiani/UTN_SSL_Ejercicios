@@ -4,7 +4,7 @@
 #define VERDADERO 1
 #define FALSO 0
 
-/* -------------FALTA TERMINAR--------------
+/*
 Leer una cadena de consola, recorrerla caracter a caracter e imprimir en pantalla una línea por cada caracter leido. Cada línea dirá:
 “[A-Z]” si es una letra en mayúsculas.
 “[a-z]” si es una letra en minúsculas.
@@ -31,7 +31,7 @@ int main()
                 printf("%c", unaLetra);
                 printf(" ");
                 printf("[0-9]\n");
-            }else{
+            }
             
             if(isupper(unaLetra)){
                 printf("%c", unaLetra);
@@ -39,7 +39,18 @@ int main()
                 printf("[A-Z]\n");
             }
             
+            if(islower(unaLetra)){
+                printf("%c", unaLetra);
+                printf(" ");
+                printf("[a-z]\n");
+            }
             
+            if (!(isdigit(unaLetra))&& !(isupper(unaLetra))&& !(islower(unaLetra))){
+            
+                printf("%c", unaLetra);
+                printf(" ");
+                printf("[OTRO]\n");
+            }
         offset++;
         }
         return 0;
