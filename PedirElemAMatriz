@@ -14,16 +14,31 @@ int main()
         int row, col;
         row = 0;
         col = 0;
+        int err = 0;
         int result =0;
         
         printf("elija una fila\n");
         scanf("%d",&row);
+        if((row<0)||(row>3)){
+            printf("la fila ingresada no existe\n");
+            err = 1;
+        }
+        
+        
         printf("elija una columna\n");
         scanf("%d",&col);
         
+        if((col<0)||(col>3)){
+            printf("la columna ingresada no existe\n");
+            err = 1;
+        }
+        
+        if (err ==0){
         printf("El valor es: ");
-        result = matrix[row][col];
+        result = matrix[row-1][col-1];
         printf("%d",result);
+        }else{
+        printf("ejecute el programa nuevamente");
         
         return 0;
         }
