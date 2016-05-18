@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#define VERDADERO 1
+#define FALSO 0
+
+/* TERMINAR
+Crear una matriz de enteros de 3 x 3, asignarle números aleatorios y mostrar en pantalla en forma de matriz (3 líneas de 3 columnas cada una).
+*/
+int main()
+{
+        int matrix[3][3] = {6,5,4,3,2,1,7,8,9};
+        
+        int row, col;
+        row = 0;
+        col = 0;
+        int result =0;
+        
+        printf("elija una fila\n");
+        scanf("%d",&row);
+        printf("elija una columna\n");
+        scanf("%d",&col);
+        
+        printf("El valor es: ");
+        result = matrix[row][col];
+        printf("%d",result);
+        
+        return 0;
+        }
