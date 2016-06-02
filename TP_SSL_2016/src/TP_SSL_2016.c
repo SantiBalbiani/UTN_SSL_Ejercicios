@@ -9,22 +9,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define ESTADO_ACEPTACION 1
+#define ESTADO_ACEPTACION 5
 #define FALSO 0
-	// Filas son estados
-	// Inicial - Invalido - EstadoFinal
-	// Columnas NumeroEntero	Cero	Otro
-	/*
 
-
-Estados/ConjCaracteres	NumeroEntero	Cero	Otro
-0	0	1	2
-1	0	1	2
-2	2	2	2
-
-
-	*/
-	int matrix[3][3] = {0,1,2,0,1,2,2,2,2};
+	int matrix[5][3] = {2,1,3,2,4,3,4,4,3,3,3,3,4,5,3,4,5,3};
 
 //Obtengo la columna de la matriz que es igual al conjuntoCaracter
 int getConjuntoCaracter(char carLeido){
